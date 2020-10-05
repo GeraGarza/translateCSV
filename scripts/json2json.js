@@ -11,11 +11,11 @@ translate = async (lang = "en") => {
   for (const property in data) {
     for (const index in data[property]) {
       var words_to_translate = data[property][index];
-      //   var result = await tr([words_to_translate], {
-      //     from: "en",
-      //     to: lang,
-      //   });
-      data_copy[property][index] = 6; //result.text;
+        var result = await tr([words_to_translate], {
+          from: "en",
+          to: lang,
+        });
+      data_copy[property][index] = result.text;
     }
   }
 

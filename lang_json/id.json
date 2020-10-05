@@ -1,1 +1,37 @@
-{"GLOBAL":{},"START_PAGE":{"BUTTON_SIGNUP":6,"BUTTON_LOGIN":6,"LABEL_START_GOT":6,"LABEL_START_KEY":6,"LABEL_START_GR":6,"LABEL_START_ALREADY_ACCOUNT":6,"CTA_LEARN_MORE_ABOUT_CBRE":6,"START_HEADER":6},"ABOUT_PAGE":{"LABEL_ABOUT_CBRE":6,"BUTTON_OUR_VALUES":6,"BUTTON_OUR_HISTORY":6,"BOTTON_CBRE_TODAY":6,"BOTTON_CORPROATE_RESPONSIBILITY":6,"BUTTON_ABOUT_GWS":6,"BUTTON_WHO_WE SERVE":6,"BUTTON_WHY_JOIN_CBRE":6,"BUTTON_CAREERS_AT_CBRE":6},"OUR_VALUES":{"LABEL_VALUES_HEADER":6,"LABEL_VALUES_DESC":6,"LABEL_VALUES_SECTION_TITLE":6,"LABEL_RESPECT":6,"LABEL_RESPECT_DESC":6,"LABEL_INTEGRITY":6,"LABEL_INTEGRITY_DESC":6,"LABEL_SERVICE":6,"LABEL_SERVICE_DESC":6,"LABEL_EXCELLENCE":6,"LABEL_EXCELLENCE_DESC":6}}
+{
+    "GLOBAL": {},
+    "START_PAGE": {
+        "BUTTON_SIGNUP": "DAFTAR",
+        "BUTTON_LOGIN": "GABUNG",
+        "LABEL_START_GOT": "Got a",
+        "LABEL_START_KEY": "kunci?",
+        "LABEL_START_GR": "Ruang hijau",
+        "LABEL_START_ALREADY_ACCOUNT": "Sudah memiliki akun?",
+        "CTA_LEARN_MORE_ABOUT_CBRE": "Pelajari lebih lanjut tentang CBRE",
+        "START_HEADER": "Tempat yang membantu Anda mempersiapkan diri untuk bergabung CBRE"
+    },
+    "ABOUT_PAGE": {
+        "LABEL_ABOUT_CBRE": "Tentang CBRE",
+        "BUTTON_OUR_VALUES": "Nilai kita",
+        "BUTTON_OUR_HISTORY": "Sejarah kita",
+        "BOTTON_CBRE_TODAY": "CBRE Hari ini",
+        "BOTTON_CORPROATE_RESPONSIBILITY": "Tanggung jawab perusahaan",
+        "BUTTON_ABOUT_GWS": "Tentang GWS",
+        "BUTTON_WHO_WE SERVE": "Siapa Kami Melayani",
+        "BUTTON_WHY_JOIN_CBRE": "Mengapa Bergabung CBRE",
+        "BUTTON_CAREERS_AT_CBRE": "Karir di CBRE"
+    },
+    "OUR_VALUES": {
+        "LABEL_VALUES_HEADER": "NILAI-NILAI RISE KAMI",
+        "LABEL_VALUES_DESC": "Perilaku yang mendukung nilai-nilai kita.",
+        "LABEL_VALUES_SECTION_TITLE": "NILAI-NILAI RISE KAMI",
+        "LABEL_RESPECT": "MENGHORMATI",
+        "LABEL_RESPECT_DESC": "Kami bertindak dengan pertimbangan untuk ide-ide orang lain dan berbagi informasi secara terbuka untuk menginspirasi kepercayaan dan mendorong kolaborasi",
+        "LABEL_INTEGRITY": "INTEGRITAS",
+        "LABEL_INTEGRITY_DESC": "Tidak ada satu individu, tidak ada kesepakatan, tidak ada satu klien, lebih besar dari komitmen kami untuk perusahaan kami dan apa yang kita perjuangkan",
+        "LABEL_SERVICE": "LAYANAN",
+        "LABEL_SERVICE_DESC": "Kami mendekati klien kami tantangan dengan antusias dan ketekunan, membangun hubungan jangka panjang dengan menghubungkan orang yang tepat, modal dan peluang",
+        "LABEL_EXCELLENCE": "KEUNGGULAN",
+        "LABEL_EXCELLENCE_DESC": "Kami fokus tanpa henti pada menciptakan hasil menang untuk klien kami, karyawan dan pemegang saham"
+    }
+}
