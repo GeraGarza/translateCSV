@@ -7,6 +7,7 @@ class csv2csv {
     this.languages = languages;
     this.headers = [];
     this.wss = [];
+    this.tooManyReq = false;
   }
 
   set_sheet(sheet_index) {
@@ -47,16 +48,19 @@ class csv2csv {
     for (var z = 0; z < this.total_rows; z++) {
 
       if (!this.sheet_json[z][lang]) {
-        //setTimeout(function () {}, 1000);
+        if(this.tooManyReq){
+          this.sheet_json[z][lang] = 0
+          continue
+        }
         try {
-          // var result = await tr([this.words2translate[z]], {
-          //   from: "en",
-          //   to: this.languages[lang],
-          // });
-          this.sheet_json[z][lang] = 0;//result.text
+          var result = await tr([this.words2translate[z]], {
+            from: "en",
+            to: this.languages[lang],
+          });
+          this.sheet_json[z][lang] = result.text
         } catch {
           this.sheet_json[z][lang] = 0
-          return
+          console.log("Too many requests.")
         }
       }
     }
@@ -83,7 +87,6 @@ class csv2csv {
           header: this.headers,
         })
       );
-      console.log("Done.");
     }
   }
 

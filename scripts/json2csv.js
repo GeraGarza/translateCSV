@@ -9,8 +9,6 @@ translate_jsons = (data, filename = "outputs/csvs/GreenRoom_Translations_English
 
 
     for (var pageKey of Object.keys(data)) {
-        console.log(pageKey + " -> " + data[key])
-
         var page = data[pageKey]
         var page_json = []
         for (var key of Object.keys(page)) {

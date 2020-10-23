@@ -23,13 +23,13 @@ var filename_template = "outputs/csvs/GreenRoom_Translations_English.xls"
 var filename_translate = "outputs/csvs/GreenRoom_Translations_Final.xls"
 
 
-/* _______________   JSON  --> XLSX    __________________________ */
+/* _______________   JSON  --> XLSX  (creates english template)  __________________________ */
 
-//json2csv.translate_jsons(data, filename_template);
+json2csv.translate_jsons(data, filename_template);
+
+
+/* _______________   XLSX(en-template)  --> XLSX    __________________________ */
 //workbook = xlsx.readFile(filename_template);
-
-
-/* _______________   XLSX  --> XLSX    __________________________ */
 
 //greenroom = new csv2csv.csv2csv(workbook, languages);
 //greenroom.write_sheets(filename_translate);
@@ -37,7 +37,7 @@ var filename_translate = "outputs/csvs/GreenRoom_Translations_Final.xls"
 
 /* _______________   JSON  --> JSON    __________________________ */
 
- //json2json.translate_jsons(data, languages);
+// json2json.translate_jsons(data, languages);
 
 
 /* _______________   XLSX  --> JSON    __________________________ */
