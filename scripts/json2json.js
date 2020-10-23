@@ -11,11 +11,17 @@ translate = async (lang = "en") => {
   for (const property in data) {
     for (const index in data[property]) {
       var words_to_translate = data[property][index];
+      try{
         var result = await tr([words_to_translate], {
           from: "en",
           to: lang,
         });
       data_copy[property][index] = result.text;
+      }
+      catch{
+        data_copy[property][index] = 0;
+        console.log("Too many requests.")
+      }
     }
   }
 
@@ -23,9 +29,8 @@ translate = async (lang = "en") => {
 };
 
 writeToFile = async (lang) => {
-  console.log(languages[lang]);
   fs.writeFile(
-    `./lang_json/${languages[lang]}.json`,
+    `./outputs/json2jsons/${languages[lang]}.json`,
     JSON.stringify(await translate(languages[lang])),
     (e) => {
       if (e) throw e;

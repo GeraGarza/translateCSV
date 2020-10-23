@@ -22,7 +22,7 @@ class csv2csv {
     var sheet_name = this.workbook.SheetNames[sheet_index];
     var sheet = this.workbook.Sheets[sheet_name];
     this.sheet_json = xlsx.utils.sheet_to_json(sheet);
-
+    this.headers = []
     var range = xlsx.utils.decode_range(sheet["!ref"]); // get the range
     for (var C = range.s.c; C <= range.e.c; ++C) {
       var cellref = xlsx.utils.encode_cell({
@@ -45,12 +45,20 @@ class csv2csv {
     var lang = Object.keys(this.languages)[language_index];
 
     for (var z = 0; z < this.total_rows; z++) {
-      // var result = await tr([this.words2translate[z]], {
-      //   from: "en",
-      //   to: this.languages[lang],
-      // });
 
-      this.sheet_json[z][lang] = 6; //result.text
+      if (!this.sheet_json[z][lang]) {
+        //setTimeout(function () {}, 1000);
+        try {
+          // var result = await tr([this.words2translate[z]], {
+          //   from: "en",
+          //   to: this.languages[lang],
+          // });
+          this.sheet_json[z][lang] = 0;//result.text
+        } catch {
+          this.sheet_json[z][lang] = 0
+          return
+        }
+      }
     }
   }
 
@@ -79,12 +87,12 @@ class csv2csv {
     }
   }
 
-  async write_sheets() {
+  async write_sheets(filename) {
     await this.translate_sheets();
-    this.write_file();
+    this.write_file(filename);
   }
 
-  write_file() {
+  write_file(filename = "outputs/csvs/GreenRoom_Translations_Final.xls") {
     let wb = xlsx.utils.book_new();
     var total_sheets = this.workbook.SheetNames.length;
     for (var i = 0; i < total_sheets; i++) {
@@ -94,8 +102,7 @@ class csv2csv {
         this.workbook.SheetNames[i]
       );
     }
-    let exportFileName = `workbook.xls`;
-    xlsx.writeFile(wb, exportFileName);
+    xlsx.writeFile(wb, filename);
   }
 }
 
